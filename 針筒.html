@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 40%;
+            transform: translate(-50%, -50%);
+
+        }
+
+        .container::before {
+            position: absolute;
+            content: '';
+            width: 50px;
+            height: 140px;
+            border: 1px solid #000;
+            background-color: #000;
+            left: 100%;
+            z-index: 1;
+        }
+
+        .container::after {
+            content: '';
+            position: absolute;
+            width: 670x;
+            height: 141px;
+            background-image: repeating-linear-gradient(90deg, gray 0, gray 3px, transparent 0, transparent 0.7cm);
+            left: 0;
+            background-position: .7cm 0;
+            background-repeat: no-repeat;
+            width: calc(16cm + 5px);
+            background-size: 100% 30px;
+        }
+
+
+        .left {
+            width: 300px;
+            height: 140px;
+            border: 1px solid #000;
+            background-image: linear-gradient(#fff, #ccc, #fff);
+            display: inline-block;
+
+        }
+
+        .left::before {
+            position: absolute;
+            content: '';
+            width: 50px;
+            height: 80px;
+            border: 1px solid #000;
+            left: -51px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-image: linear-gradient(#fff, #ccc, #fff);
+        }
+
+        .left::after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 120px;
+            border: 1px solid #000;
+            left: -102px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-image: linear-gradient(#fff, #ccc, #fff);
+            border-radius: 15px;
+
+
+        }
+
+        .right {
+            position: absolute;
+            width: 340px;
+            height: 140px;
+            border: 1px solid #000;
+            display: inline-block;
+            background-image: linear-gradient(#edf6b0, #c4d67a 50%, #edf6b0);
+        }
+
+        .right::before {
+            position: absolute;
+            content: '';
+            width: 50px;
+            height: 80px;
+            border: 1px solid #000;
+            right: -52px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-image: linear-gradient(#fff, #ccc, #fff);
+        }
+
+        .right::after {
+            position: absolute;
+            content: '';
+            width: 200px;
+            height: 1px;
+            border: 1px solid #000;
+            right: -253px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .text {
+            position: absolute;
+            bottom: 10px;
+            color: gray;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="left">
+            <div class="text">Made in taiwan</div>
+        </div>
+        <div class="right"></div>
+    </div>
+
+</body>
+
+</html>
